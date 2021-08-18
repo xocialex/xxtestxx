@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/monoid" type="text/css" />
+  <link rel="stylesheet" style.css type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Coding Dashboard</title>
+</head>
+
+<body>
+  <div id="app" v-bind:class="{textStyles: isStyled}">
+    <h3> {{ title }}</h3>
+      <h4>{{subTitles[0]}}</h4>
+        <p>The styles on this page come from creating a class 'textStyles' and then v-binding it to         the root element with a Boolean 'isStyled' within the data object.</p>
+      <h4>{{subTitles[1]}}</h4>
+        <p>Here is some raw text that is not generated using Vue but still exists within the Vue           instance and alongside dynamic Vue components.</p>
+    <h4>{{subTitles[2]}}</h4>
+      <p> {{ dynamic_para }}</p>
+    <h4>{{subTitles[3]}}</h4>
+      <p>Let's make a dynamic list using a <span v-bind:class="{emphasis: isStyled}">v-for binding</span> (equivalent to a foreach loop)...</p>
+          <ul>
+            <li v-for="list_item in list_items ">
+               {{ list_item }}
+            </li>
+           </ul>
+
+           <button @click="isShow = true">click Me</button>
+           <div v-show="isShow">Content testing</div>
+
+  </div>
+</body>
+
+  
+  
+<script src="script.js"></script>  
+  
+  
+  
+</html>

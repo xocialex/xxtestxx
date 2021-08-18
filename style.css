@@ -1,0 +1,9 @@
+.textStyles {
+    font-family: "Monoid";
+    font-size: 12px;
+  }
+  .emphasis {
+    color: blue;
+    font-weight: 600;
+  }
+  
